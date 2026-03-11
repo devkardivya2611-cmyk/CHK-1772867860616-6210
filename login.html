@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Smart Pilgrim Assistant</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f7ff;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(90deg,#ff7a00,#ffb347);
+color:white;
+text-align:center;
+padding:35px 20px;
+}
+
+header h1{
+font-size:36px;
+}
+
+header p{
+margin-top:8px;
+font-size:16px;
+}
+
+/* NAVBAR */
+
+nav{
+background:#003366;
+position:sticky;
+top:0;
+z-index:1000;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+padding:14px 20px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+background:#ff7a00;
+border-radius:6px;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:50px 20px;
+}
+
+.hero img{
+width:120px;
+margin-top:20px;
+}
+
+.hero h2{
+color:#003366;
+margin-bottom:10px;
+}
+
+.hero p{
+max-width:600px;
+margin:auto;
+}
+
+.hero button{
+margin-top:20px;
+padding:12px 22px;
+border:none;
+background:#ff7a00;
+color:white;
+font-size:15px;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+background:#e86500;
+}
+
+/* SECTION */
+
+section{
+padding:50px 10%;
+}
+
+section h2{
+color:#003366;
+margin-bottom:25px;
+}
+
+/* CARD GRID */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
+}
+
+/* CARD */
+
+.card{
+background:white;
+border-radius:12px;
+padding:25px;
+text-align:center;
+box-shadow:0 5px 12px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 18px rgba(0,0,0,0.15);
+}
+
+.card img{
+width:60px;
+margin-bottom:12px;
+}
+
+/* CARD COLORS */
+
+.route{
+background:#e6ffe6;
+}
+
+.hotel{
+background:#fff3e6;
+}
+
+.bus{
+background:#e6f3ff;
+}
+
+.hospital{
+background:#ffe6e6;
+}
+
+/* BUTTON */
+
+.btn{
+margin-top:12px;
+padding:8px 16px;
+border:none;
+background:#003366;
+color:white;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#ff7a00;
+}
+
+/* MAP */
+
+iframe{
+width:100%;
+height:350px;
+border-radius:12px;
+box-shadow:0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+
+footer{
+background:#003366;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🛕 Smart Pilgrim Assistant</h1>
+<p>Your Smart Travel Guide for Pilgrimage Cities</p>
+
+</header>
+
+<nav>
+
+<a href="#routes">Routes</a>
+<a href="#budget">Budget</a>
+<a href="#hotels">Hotels</a>
+<a href="#bus">Bus</a>
+<a href="#hospital">Hospitals</a>
+<a href="#map">Map</a>
+
+</nav>
+
+<div class="hero">
+
+<h2>Plan Your Pilgrimage Journey Easily</h2>
+
+<p>
+Find temples, travel routes, buses, hotels and hospitals all in one place.
+</p>
+
+<img src="https://cdn-icons-png.flaticon.com/512/854/854878.png">
+
+<br>
+
+<button>Start Planning</button>
+
+</div>
+
+<!-- ROUTES -->
+
+<section id="routes">
+
+<h2>🗺 Temple Routes</h2>
+
+<div class="cards">
+
+<div class="card route">
+
+<img src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
+
+<h3>Solapur → Pandharpur</h3>
+
+<p>Distance: 70 km</p>
+
+<button class="btn">View Route</button>
+
+</div>
+
+<div class="card route">
+
+<img src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
+
+<h3>Pune → Shirdi</h3>
+
+<p>Distance: 200 km</p>
+
+<button class="btn">View Route</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BUDGET -->
+
+<section id="budget">
+
+<h2>💰 Budget Planner</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Low Budget</h3>
+
+<p>Bus Travel</p>
+<p>Dormitory Stay</p>
+
+<button class="btn">Select</button>
+
+</div>
+
+<div class="card">
+
+<h3>Medium Budget</h3>
+
+<p>Train Travel</p>
+<p>Budget Hotels</p>
+
+<button class="btn">Select</button>
+
+</div>
+
+<div class="card">
+
+<h3>Premium Budget</h3>
+
+<p>Cab Travel</p>
+<p>Luxury Hotels</p>
+
+<button class="btn">Select</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- HOTELS -->
+
+<section id="hotels">
+
+<h2>🏨 Nearby Hotels</h2>
+
+<div class="cards">
+
+<div class="card hotel">
+
+<img src="https://cdn-icons-png.flaticon.com/512/139/139899.png">
+
+<h3>Temple View Hotel</h3>
+
+<p>₹1500 / night</p>
+
+<button class="btn">Book</button>
+
+</div>
+
+<div class="card hotel">
+
+<img src="https://cdn-icons-png.flaticon.com/512/139/139899.png">
+
+<h3>Pilgrim Lodge</h3>
+
+<p>₹800 / night</p>
+
+<button class="btn">Book</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BUS -->
+
+<section id="bus">
+
+<h2>🚌 Bus Schedule</h2>
+
+<div class="cards">
+
+<div class="card bus">
+
+<img src="https://cdn-icons-png.flaticon.com/512/61/61231.png">
+
+<h3>Solapur → Pandharpur</h3>
+
+<p>6:00 AM</p>
+<p>10:00 AM</p>
+<p>4:00 PM</p>
+
+<button class="btn">Check Seats</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- HOSPITAL -->
+
+<section id="hospital">
+
+<h2>🏥 Nearest Hospitals</h2>
+
+<div class="cards">
+
+<div class="card hospital">
+
+<img src="https://cdn-icons-png.flaticon.com/512/2967/2967350.png">
+
+<h3>City Care Hospital</h3>
+
+<p>Distance: 2 km</p>
+
+<button class="btn">View</button>
+
+</div>
+
+<div class="card hospital">
+
+<img src="https://cdn-icons-png.flaticon.com/512/2967/2967350.png">
+
+<h3>Temple Health Center</h3>
+
+<p>Distance: 1 km</p>
+
+<button class="btn">View</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MAP -->
+
+<section id="map">
+
+<h2>📍 Temple Location Map</h2>
+
+<iframe src="https://maps.google.com/maps?q=pandharpur&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</section>
+
+<footer>
+
+<p>© 2026 Smart Pilgrim Assistant | Built for Pilgrimage Travelers</p>
+
+</footer>
+
+</body>
+</html>
