@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #89f7fe, #66a6ff);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+header {
+    background: #0047ab;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: -20px -20px 20px -20px;
+}
+
+.box {
+    width: 350px;
+    background: white;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.box input, .box select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.box button {
+    width: 95%;
+    padding: 10px;
+    background: #0047ab;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.card .icon {
+    font-size: 40px;
+    color: #0047ab;
+}
+
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #0047ab;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #0047ab;
+    color: white;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+form {
+    text-align: center;
+    margin: 20px;
+}
+
+form input, form select {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #0047ab;
+    color: white;
+    cursor: pointer;
+}
+
+.green { color: green; font-weight: bold; }
+.orange { color: orange; font-weight: bold; }
+.red { color: red; font-weight: bold; }
+
+.center { text-align: center; }
+
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+li {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+a { color: #0047ab; }
