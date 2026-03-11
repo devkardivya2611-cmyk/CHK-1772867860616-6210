@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Hotel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Hotel Booking</h2>
+    <form method="POST">
+        <input type="number" name="budget" placeholder="Filter by Budget (₹)">
+        <button type="submit">Filter</button>
+    </form>
+    {% if hotels %}
+    <h3>Available Hotels</h3>
+    {% for h in hotels %}
+    <form method="POST" action="/book_hotel" style="margin:10px">
+        <input type="hidden" name="name" value="{{ h.name }}">
+        <p>{{ h.name }} - ₹{{ h.price }} 
+        <button type="submit">Book</button></p>
+    </form>
+    {% endfor %}
+    {% endif %}
+    <p class="center"><a href="/dashboard">Back</a></p>
+</body>
+</html>

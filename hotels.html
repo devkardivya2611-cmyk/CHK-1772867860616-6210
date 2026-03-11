@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotels</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Budget Hotels</h2>
+    <form method="POST">
+        <input type="number" name="budget" placeholder="Your Budget (₹)" required>
+        <button type="submit">Search</button>
+    </form>
+    {% if hotels %}
+    <table>
+        <tr><th>Hotel</th><th>Location</th><th>Price</th></tr>
+        {% for h in hotels %}
+        <tr><td>{{ h.name }}</td><td>{{ h.location }}</td><td>₹{{ h.price }}</td></tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <p class="center"><a href="/dashboard">Back</a> | <a href="/hotel_booking">Book Hotel</a></p>
+</body>
+</html>

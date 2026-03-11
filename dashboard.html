@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Smart City Travel</h1>
+        <p>Plan your travel smartly</p>
+    </header>
+    <div class="cards">
+        <div class="card">
+            <i class="fa-solid fa-bus icon"></i>
+            <h3>Live Bus</h3>
+            <p>Track buses in real-time</p>
+            <a href="/buses">Open</a>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-map icon"></i>
+            <h3>Route Planner</h3>
+            <p>Find best routes</p>
+            <a href="/route">Open</a>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-gopuram icon"></i>
+            <h3>Temple Crowd</h3>
+            <p>Check crowd levels</p>
+            <a href="/temples">Open</a>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-hotel icon"></i>
+            <h3>Hotels</h3>
+            <p>Find budget stays</p>
+            <a href="/hotels">Open</a>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-users icon"></i>
+            <h3>Commuters</h3>
+            <p>Daily bus schedule</p>
+            <a href="/commuters">Open</a>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-bell icon"></i>
+            <h3>Alerts</h3>
+            <p>Travel notifications</p>
+            <a href="/alerts">Open</a>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-ticket icon"></i>
+            <h3>Darshan Pass</h3>
+            <p>Book temple pass</p>
+            <a href="/darshan">Open</a>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-id-card icon"></i>
+            <h3>Bus Pass</h3>
+            <p>Apply for bus pass</p>
+            <a href="/bus_pass">Open</a>
+        </div>
+    </div>
+</body>
+</html>

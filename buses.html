@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Bus</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Live Bus Tracking</h2>
+    <table>
+        <tr><th>Bus</th><th>Route</th><th>Next Stop</th><th>Time</th><th>Status</th></tr>
+        {% for b in buses %}
+        <tr>
+            <td>{{ b.bus_no }}</td>
+            <td>{{ b.route }}</td>
+            <td>{{ b.next_stop }}</td>
+            <td>{{ b.time }}</td>
+            <td class="{% if b.delay > 0 %}red{% else %}green{% endif %}">
+                {% if b.delay > 0 %}Delayed {{ b.delay }}m{% else %}On Time{% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p class="center"><a href="/dashboard">Back</a> | <button onclick="location.reload()">Refresh</button></p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temples</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Temple Crowd Status</h2>
+    <table>
+        <tr><th>Temple</th><th>Location</th><th>Crowd</th></tr>
+        {% for t in temples %}
+        <tr>
+            <td>{{ t.name }}</td>
+            <td>{{ t.location }}</td>
+            <td class="{% if t.crowd == 'Low' %}green{% elif t.crowd == 'Medium' %}orange{% else %}red{% endif %}">
+                {{ t.crowd }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p class="center"><a href="/dashboard">Back</a> | <button onclick="location.reload()">Refresh</button></p>
+</body>
+</html>

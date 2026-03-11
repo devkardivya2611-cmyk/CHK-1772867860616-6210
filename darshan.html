@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Darshan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Darshan Pass Booking</h2>
+    <form method="POST">
+        <input type="text" name="temple" placeholder="Temple Name" required>
+        <input type="date" name="date" required>
+        <button type="submit">Book Pass</button>
+    </form>
+    <p class="center"><a href="/dashboard">Back</a></p>
+</body>
+</html>

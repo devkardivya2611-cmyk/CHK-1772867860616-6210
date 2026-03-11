@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bus Pass</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Bus Pass Application</h2>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <select name="duration">
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+        </select>
+        <button type="submit">Apply</button>
+    </form>
+    <p class="center"><a href="/dashboard">Back</a></p>
+</body>
+</html>

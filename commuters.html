@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Commuters</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Daily Bus Schedule</h2>
+    <table>
+        <tr><th>Bus</th><th>Route</th><th>Time</th></tr>
+        {% for c in commuters %}
+        <tr><td>{{ c.name }}</td><td>{{ c.route }}</td><td>{{ c.time }}</td></tr>
+        {% endfor %}
+    </table>
+    <p class="center"><a href="/dashboard">Back</a></p>
+</body>
+</html>

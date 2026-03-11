@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Route</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Route Planner</h2>
+    <form method="POST">
+        <input type="text" name="start" placeholder="From" required>
+        <input type="text" name="end" placeholder="To" required>
+        <button type="submit">Find Route</button>
+    </form>
+    {% if route %}
+    <div class="box" style="margin-top:20px">
+        <h3>Route Found</h3>
+        <p>{{ route }}</p>
+    </div>
+    {% endif %}
+    <p class="center"><a href="/dashboard">Back</a></p>
+</body>
+</html>
